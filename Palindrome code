@@ -1,0 +1,45 @@
+#palindrome code in python
+def inner():
+    a=input("Enter the number:")
+    b=a[::-1]
+    if int(a) <= 0:
+        print("Enter again... ")
+    else:
+        c=str(int(a)+int(b))
+        d=''
+        d=d+c
+
+        for i in range(1000):
+            print("Reverse number is :", b)
+            if a==b:
+                print("Number is :", a)
+                print("Reverse number is :", a[::-1])
+                print(a,"is palindrome")
+                break
+            else:
+                if d==d[::-1]:
+                    print("Number is :",d)
+                    print("Reverse number is :", d[::-1])
+                    print(d,"is palindrome")
+                    break
+
+                else:
+                    print("Number is :",d)
+                    print("Reverse number is :", d[::-1])
+                    d=str(int(d)+int(d[::-1]))
+                    print("Number is :",d)
+                    print("Reverse number is :",d)
+            d=d
+
+    print("\nDo you want to enter again\n1)yes\n2)no")
+    inp = input("Enter yes or no :")
+    if inp=="yes":
+        res=inner()
+
+    else:
+        print("Thank you...")
+    return inner
+res=inner()
+
+
+
